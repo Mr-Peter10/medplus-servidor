@@ -18,6 +18,7 @@ const LICENCAS = [
    {
      machineCode:    'MP-XXXX-XXXX-XXXX',  // código do PC do cliente
      farmacia:       'Boa Vida',    // nome da farmácia
+     sistema:        'farmacia',
      plano:          'anual',              // mensal | bimestral | anual | vitalicio
      dataExpiracao:  '2027-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
@@ -33,13 +34,15 @@ module.exports = (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'GET')    return res.status(405).json({ ok: false, erro: 'Método não permitido' });
 
-  const { machineCode } = req.query;
+  const { machineCode , sistema } = req.query;
   if (!machineCode) return res.status(400).json({ ok: false, erro: 'machineCode obrigatório' });
 
+  if(!sistema) return res.json({ok:false , erro:'Sistema Obrigatório'})
+  
   const mc = machineCode.trim().toUpperCase();
 
   // Procurar licença activa para este machineCode
-  const licenca = LICENCAS.find(l => l.machineCode.toUpperCase() === mc && l.ativo);
+  const licenca = LICENCAS.find(l => l.machineCode.toUpperCase() === mc && l.sistema === sistema && l.ativo);
 
   if (!licenca) {
     return res.json({ ok: false, erro: 'Sem licença activa para este dispositivo. Contacte o suporte MedPlus.' });
@@ -52,7 +55,7 @@ module.exports = (req, res) => {
     const hoje   = new Date();
     hoje.setHours(0, 0, 0, 0);
     if (expira < hoje) {
-      return res.json({ ok: false, erro: `Licença expirada em ${licenca.dataExpiracao}. Contacte o suporte MedPlus para renovar.` });
+      return res.json({ ok: false, erro: `Licença expirada em ${licenca.dataExpiracao}. Contacte o suporte MedPlus apôs a expiração.` });
     }
   }
 
