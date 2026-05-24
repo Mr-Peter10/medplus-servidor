@@ -15,13 +15,13 @@ const SECRET = 'ndozera10.';
 // ═══════════════════════════════════════════════════════
 const LICENCAS = [
   // Exemplo (descomenta e preenche para activar um cliente):
-  // {
-  //   machineCode:    'MP-XXXX-XXXX-XXXX',  // código do PC do cliente
-  //   farmacia:       'Farmácia Central',    // nome da farmácia
-  //   plano:          'mensal',              // mensal | bimestral | anual | vitalicio
-  //   dataExpiracao:  '2026-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
-  //   ativo:          true,                  // false = bloquear imediatamente
-  // },
+   {
+     machineCode:    'MP-XXXX-XXXX-XXXX',  // código do PC do cliente
+     farmacia:       'Farmácia Central',    // nome da farmácia
+     plano:          'mensal',              // mensal | bimestral | anual | vitalicio
+     dataExpiracao:  '2026-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
+     ativo:          true,                  // false = bloquear imediatamente
+   },
 ];
 
 module.exports = (req, res) => {
