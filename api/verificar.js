@@ -19,7 +19,7 @@ const LICENCAS = [
      machineCode:    'MP-XXXX-XXXX-XXXX',  // código do PC do cliente
      farmacia:       'Boa Vida',    // nome da farmácia
      sistema:        'farmacia',
-     plano:          'anual',              // mensal | bimestral | anual | vitalicio
+     plano:          'anual',        //semanal | mensal | bimestral | trimestral | semestral | anual | vitalicio
      dataExpiracao:  '2027-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
    },
@@ -28,7 +28,7 @@ const LICENCAS = [
      machineCode:    'MP-5661-081D-F799',  // código do PC do cliente
      farmacia:       'Teste meu pc',    // nome da farmácia
      sistema:        'farmacia',
-     plano:          'semanal',              // mensal | bimestral | anual | vitalicio
+     plano:          'semanal',          //semanal | mensal | bimestral | trimestral | semestral | anual | vitalicio
      dataExpiracao:  '2026-06-4',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
    },
