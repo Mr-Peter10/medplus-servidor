@@ -23,6 +23,15 @@ const LICENCAS = [
      dataExpiracao:  '2027-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
    },
+
+  {
+     machineCode:    'MP-5661-081D-F799',  // código do PC do cliente
+     farmacia:       'Teste meu pc',    // nome da farmácia
+     sistema:        'farmacia',
+     plano:          'mensal',              // mensal | bimestral | anual | vitalicio
+     dataExpiracao:  '2027-06-01',          // YYYY-MM-DD (ignorado se vitalicio)
+     ativo:          true,                  // false = bloquear imediatamente
+   },
 ];
 
 module.exports = (req, res) => {
