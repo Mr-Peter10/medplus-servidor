@@ -28,8 +28,8 @@ const LICENCAS = [
      machineCode:    'MP-5661-081D-F799',  // código do PC do cliente
      farmacia:       'Teste meu pc',    // nome da farmácia
      sistema:        'farmacia',
-     plano:          'mensal',              // mensal | bimestral | anual | vitalicio
-     dataExpiracao:  '2026-06-27',          // YYYY-MM-DD (ignorado se vitalicio)
+     plano:          'semanal',              // mensal | bimestral | anual | vitalicio
+     dataExpiracao:  '2026-06-4',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
    },
 ];
