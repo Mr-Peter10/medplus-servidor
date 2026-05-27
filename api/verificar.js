@@ -30,7 +30,7 @@ const LICENCAS = [
      sistema:        'farmacia',
      plano:          'semanal',          //semanal | mensal | bimestral | trimestral | semestral | anual | vitalicio
      dataExpiracao:  '2026-06-4',          // YYYY-MM-DD (ignorado se vitalicio)
-     ativo:          false,                  // false = bloquear imediatamente
+     ativo:          true,                  // false = bloquear imediatamente
    },
 ];
 
