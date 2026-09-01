@@ -38,7 +38,7 @@ const LICENCAS = [
      farmacia:       'Teste meu pc',    // nome da farmácia
      sistema:        'hospital',
      plano:          'semanal',          //semanal | mensal | bimestral | trimestral | semestral | anual | vitalicio
-     dataExpiracao:  '2026-07-5',          // YYYY-MM-DD (ignorado se vitalicio)
+     dataExpiracao:  '2026-09-5',          // YYYY-MM-DD (ignorado se vitalicio)
      ativo:          true,                  // false = bloquear imediatamente
    },
 ];
