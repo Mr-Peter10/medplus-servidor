@@ -25,7 +25,7 @@ const LICENCAS = [
    },
 
   {
-     machineCode:    'MP-5661-081D-F799',  // código do PC do cliente
+     machineCode:    'MP-4DF9-E6A2-F0C5',  // código do PC do cliente
      farmacia:       'Teste meu pc',    // nome da farmácia
      sistema:        'farmacia',
      plano:          'semanal',          //semanal | mensal | bimestral | trimestral | semestral | anual | vitalicio
